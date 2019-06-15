@@ -54,5 +54,27 @@
     except:
     	<error가 발생하면 실행될 코드>
     	print("Error!")
+            
+### 함수 (function)
+#### 선언
+
+    def <함수이름>(<파라미터>):
+	     <함수내용>
+	     return "Hi"	#[선택]반환값이 있을 때만!
+
+
+#### 호출
+    <함수이름>(<인자>)
+
+#### 예시
+    def greeting(lang):
+    	print(lang)
+    	return 12
+    
+    greeting("Hello World")    # Hello World 출력
+    print(greeting("hello"))   #12 출력
+
+
+
 
 ~ 추가추가 ~ 
