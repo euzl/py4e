@@ -3,12 +3,14 @@
             
 ---            
 ### 기본
-- 주석 : '#'기호사용
+- 주석 : `#`기호사용
 - 문장의 끝에 세미콜론(;)을 붙히지 않는다!!
 - 논리연산자
 	- `&&` 대신 `and` 사용 `||` 대신 `or` 사용
 	- `not` 도 있다!
 - True/False 로 표기 (첫글자 대문자!)
+- `cnt++` <- 사용불가. `cnt += 1` <- 사용가능
+- `==`은 값만 비교하지만 /  `is`, `is not`은 자료형과 값 모두 비교
         
           
 ### 입력 및 출력
@@ -47,11 +49,20 @@
     <들여쓰기>실행할 코드    # 들여쓰기 필수!!
 
 ### 예외처리
+	try:
+	    ...<코드>
+	except:
+	    <error가 발생하면 실행될 코드>
+	    print("Error!")
+	
+예시
+
     try:
-    	...<코드>
+        fval = float(sval)		# sval이 number인지 체크
     except:
-    	<error가 발생하면 실행될 코드>
-    	print("Error!")
+        print('Invalid input')		# number이 아니면 에러 띄워줌!
+        continue
+
 
 ---
 ### 함수 (function)
@@ -73,6 +84,23 @@
     greeting("Hello World")    # Hello World 출력
     print(greeting("hello"))   #12 출력
 
+---
+### 반복문
+#### for 루프
+    for 루프
+    for <변수명> in <리스트>:
+    	<코드>
+
+이런것도 가능하다!
+
+    friends = ['Connect', 'Korea', 'NHN']
+    for friend in friends:
+    	print('Happy New Year!', friend)
+    
+    # [출력]
+    # Happy New Year! Connect
+    # Happy New Year! Korea
+    # Happy New Year! NHN
 
 
 
