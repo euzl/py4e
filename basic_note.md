@@ -39,6 +39,21 @@
 - input()으로 입력받으면 문자열로 저장
 - 타입변환 후 사용
 - len(<변수명>)	-> 글자 수 반환
+- 문자열 합치기 : `+` 기호 이용
+- `<확인하고자하는 문자(열)> in <변수명>` #있으면 true 없으면 false
+- strip 메소드 : 공백 제거 (필요시 검색)
+- startswith : 시작 문자열 찾기. 필요할까? ex)line.startswith('Hi') #true
+
+#### 문자열 슬라이싱
+`변수명[a:b]`을 이용한다.
+**범위 : [a,b)** a는 포함 b는 불포함!!!
+
+    myString = [Myname is Yujin]
+    print(myString[0:4]) # Myn 출력. [0] ~ [3]
+    print(myString[5:]) # [5] ~ 출력
+    print(myString[:3]) # ~ [2] 출력
+    print(myString[:]) # 전체출력
+
                
 ### 들여쓰기
 - 들여쓰기 = [Tab] = [Space]*4번
