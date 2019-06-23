@@ -49,10 +49,10 @@
 **범위 : [a,b)** a는 포함 b는 불포함!!!
 
     myString = [Myname is Yujin]
-    print(myString[0:4]) # Myn 출력. [0] ~ [3]
-    print(myString[5:]) # [5] ~ 출력
-    print(myString[:3]) # ~ [2] 출력
-    print(myString[:]) # 전체출력
+    print(myString[0:4])   # Myn 출력. [0] ~ [3]
+    print(myString[5:])    # [5] ~ 출력
+    print(myString[:3])    # ~ [2] 출력
+    print(myString[:])     # 전체출력
 
                
 ### 들여쓰기
