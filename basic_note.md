@@ -15,7 +15,7 @@
           
 ### 입력 및 출력
 
-    name = input()     # 값을 입력받을 수 있다.
+    name = input()     # 값을 입력받을 수 있다. -- 문자열로 받음
     print(name)        # name에 저장된 값 출력
     
     name = input('What your name?')   # What your name? 이라고 물어보면 입력할 수 있다.
@@ -35,6 +35,10 @@
  - type(<변수명>) -> 타입 반환 
  - float(<변수명>) -> 타입 변환 // float, int 등.  단, 변환이 될 때만! str에서 int 는 변환 불가!
           
+### 문자열
+- input()으로 입력받으면 문자열로 저장
+- 타입변환 후 사용
+- len(<변수명>)	-> 글자 수 반환
                
 ### 들여쓰기
 - 들여쓰기 = [Tab] = [Space]*4번
@@ -101,6 +105,17 @@
     # Happy New Year! Connect
     # Happy New Year! Korea
     # Happy New Year! NHN
+    
+    for i in range(1, 4):	# range(1,4) 는 1이상 4미만 !!
+    	print(i)
+    
+    # [출력}
+    # 1
+    # 2
+    # 3
+
+	
+
 
 
 
