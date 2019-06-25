@@ -150,16 +150,14 @@
 
 - '\n'도 하나의 문자.
 
+#### 파일 읽기
 
     fhand = open("haha.txt")
     
     for line in fhand:
-    	print(line)        # 한 줄씩 띄워져서 출력됨
+    	print(line)      # 한 줄씩 띄워져서 출력됨
     
     inp = fhand.read()     # 파일 전체 읽기
-
-
-
 
 
 
