@@ -1,12 +1,14 @@
 # 파이썬 정리
 파이썬을 공부하며 C++과 다르거나 헷갈리는 개념 위주로 정리하고자 함
- 1. 기본
- 2. 함수
- 3. 반복문
- 4. 파일
- 5. 리스트  
+
+### 목록
+ 1. [기본 (기타)](https://github.com/euzl/py4e/blob/master/basic_note.md#%EA%B8%B0%EB%B3%B8)
+ 2. [함수](https://github.com/euzl/py4e/blob/master/basic_note.md#%ED%95%A8%EC%88%98-function)
+ 3. [반복문](https://github.com/euzl/py4e/blob/master/basic_note.md#%EB%B0%98%EB%B3%B5%EB%AC%B8)
+ 4. [파일](https://github.com/euzl/py4e/blob/master/basic_note.md#%ED%8C%8C%EC%9D%BC)
+ 5. [리스트](https://github.com/euzl/py4e/blob/master/basic_note.md#%EB%A6%AC%EC%8A%A4%ED%8A%B8-list)  
 ---            
-### 기본
+## 기본 (기타)
 - 주석 : `#`기호사용
 - 문장의 끝에 세미콜론(;)을 붙히지 않는다!!
 - 논리연산자
@@ -109,7 +111,7 @@ except:
     continue
 ```
 ---
-### 함수 (function)
+## 함수 (function)
 #### 선언
 ```python
 def <함수이름>(<파라미터>):
@@ -133,7 +135,7 @@ print(greeting("hello"))   #12 출력
 ```
 
 ---
-### 반복문
+## 반복문
 #### for 루프
 ```python
 for 루프
@@ -162,7 +164,7 @@ for i in range(1, 4):	# range(1,4) 는 1이상 4미만 !!	range(5) : [0,5)
 ```
 	
 ---
-### 파일
+## 파일
 #### 파일 열기
 `open(<파일명>, <모드선택>)`
 - 파일명 : 문자열, 확장자 포함
@@ -195,7 +197,7 @@ except:
 ```
 
 ---
-### 리스트 (List)
+## 리스트 (List)
 - **컬렉션** : 하나의 변수에 여러 값을 넣는 것이 가능하도록 하는 것
 - **리스트** : 컬렉션의 한 종류
 
