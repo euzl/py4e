@@ -4,6 +4,7 @@
  2. 함수
  3. 반복문
  4. 파일
+ 5. 
             
 ---            
 ### 기본
@@ -152,7 +153,7 @@ for friend in friends:
 # Happy New Year! Korea
 # Happy New Year! NHN
 
-for i in range(1, 4):	# range(1,4) 는 1이상 4미만 !!
+for i in range(1, 4):	# range(1,4) 는 1이상 4미만 !!	range(5) : [0,5)
     print(i)
 
 # [출력]
@@ -193,5 +194,39 @@ except:
     print('File cannot be opened: ', fname)
     quit()
 ```
+
+---
+### 리스트 (List)
+- **컬렉션** : 하나의 변수에 여러 값을 넣는 것이 가능하도록 하는 것
+- **리스트** : 컬렉션의 한 종류
+
+사용방법
+```python
+friend = list()          # 빈 리스트 생성
+# friend = [] 로도 생성가능했다.
+ 
+friend.append('Joseph')  # 항목 추가
+friend.sort()            #항목 정렬
+
+print('Glenn' in friend)  # in을 활용해 리스트에 'Glenn'이 있는지 확인 --> false 반환
+```
+
+#### 특징
+- 병합, 슬라이싱 가능 (문자열과 같은 방식)
+- dir() 메소드 : 특정 타입에서 사용할 수 있는 메소드의 목록들을 보여줌
+
+#### 문자열과 리스트
+`<리스트이름> = <기존문자열>.split()` 하면 <기존문자열>을 띄어쓰기 단위로 나눠서 <리스트이>의 리스트로 만든다. 
+(이미 값이 있는 리스트라면 기존의 것은 사라지고 갱신됨)
+```python
+abc = 'With three words'
+stuff = abc.split()
+print(stuff)
+
+# ['With', 'three', 'words'] 로 출력됩니다.
+```
+##### 구분자
+- split() 의 기본 구분자는 빈칸.
+- split(';') ';'을 구분자로 지정. 구분자는 문자열 가능
 
 ~ 추가추가 ~ 
