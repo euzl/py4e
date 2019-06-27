@@ -18,6 +18,7 @@
 - `cnt++` <- 사용불가. `cnt += 1` <- 사용가능
 - `==`은 값만 비교하지만 /  `is`, `is not`은 자료형과 값 모두 비교
 - `print()` 함수사용하면 개행문자('\n') 추가됨
+- [최단평가] A or B 이면 A먼저 확인하고 B확인
 
 #### 반올림
 ```python
@@ -210,6 +211,9 @@ friend.append('Joseph')  # 항목 추가
 friend.sort()            #항목 정렬
 
 print('Glenn' in friend)  # in을 활용해 리스트에 'Glenn'이 있는지 확인 --> false 반환
+
+
+# words.append([a, b, c]) #[a, b, c]그대로 리스트 단위로 들어감..!
 ```
 
 #### 특징
