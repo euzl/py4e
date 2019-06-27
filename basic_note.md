@@ -7,7 +7,7 @@
  3. [반복문](https://github.com/euzl/py4e/blob/master/basic_note.md#%EB%B0%98%EB%B3%B5%EB%AC%B8)
  4. [파일](https://github.com/euzl/py4e/blob/master/basic_note.md#%ED%8C%8C%EC%9D%BC)
  5. [리스트](https://github.com/euzl/py4e/blob/master/basic_note.md#%EB%A6%AC%EC%8A%A4%ED%8A%B8-list)  
- 6. 딕셔너리
+ 6. [딕셔너리](https://github.com/euzl/py4e/blob/master/basic_note.md#%EB%94%95%EC%85%94%EB%84%88%EB%A6%ACdictionary---%EC%97%B0%EA%B4%80-%EB%B0%B0%EC%97%B4-associative-arrays)
 ---            
 ## 기본 (기타)
 - 주석 : `#`기호사용
@@ -278,12 +278,12 @@ for key in counts:	         # "key값"을 돌게 됨
 ```
 #### key나 value를 별도로 저장하려면
 1. **키로만 구성된 리스트 만들기** 
-list(<딕셔너리명>) 또는 <딕셔너리명>keys()
+	- list(<딕셔너리명>) 또는 <딕셔너리명>keys()
 2. **값으로만 구성된 리스트 만들기** 
-<딕셔너리명>values()
+	- <딕셔너리명>values()
 3. **튜플(tuple)에 쌍을 이루어 만든 리스트** 
-<딕셔너리명>.items() 
-ex) [('jan', 100), ('chuck', 1), ('fred', 42)]
+	- <딕셔너리명>.items() 
+	- ex) [('jan', 100), ('chuck', 1), ('fred', 42)]
 
 예시
 ```python
