@@ -7,6 +7,7 @@
  3. [반복문](https://github.com/euzl/py4e/blob/master/basic_note.md#%EB%B0%98%EB%B3%B5%EB%AC%B8)
  4. [파일](https://github.com/euzl/py4e/blob/master/basic_note.md#%ED%8C%8C%EC%9D%BC)
  5. [리스트](https://github.com/euzl/py4e/blob/master/basic_note.md#%EB%A6%AC%EC%8A%A4%ED%8A%B8-list)  
+ 6. 딕셔너리
 ---            
 ## 기본 (기타)
 - 주석 : `#`기호사용
@@ -19,6 +20,7 @@
 - `==`은 값만 비교하지만 /  `is`, `is not`은 자료형과 값 모두 비교
 - `print()` 함수사용하면 개행문자('\n') 추가됨
 - [최단평가] A or B 이면 A먼저 확인하고 B확인
+- string 초기화 할 때 `None` 이용! 숫자는 적절히..? 0이나 -1로..?
 
 #### 반올림
 ```python
@@ -67,7 +69,12 @@ print(j)     # '1' 출력
 - `<확인하고자하는 문자(열)> in <변수명>` # 있으면 true 없으면 false
 - `<변수명>.find(<찾을 문자열>)` # <찾을 문자열>의 시작위치 반환
 - strip 메소드 : 공백 제거 (필요시 검색)
-- startswith : 시작 문자열 찾기. 필요할까? ex)line.startswith('Hi') #true
+- startswith : 시작 문자열 찾기. 필요할까? ex)line.startswith('Hi') # true
+- split() 메소드 : <문자열>.split() => 띄어쓰기를 기준으로 문장을 단어들의 리스트로 만들어줌
+
+##### 구분자
+- split() 의 기본 구분자는 빈칸.
+- split(';') ';'을 구분자로 지정. 구분자는 문자열 가능
 
 #### 문자열 슬라이싱
 `변수명[a:b]`을 이용한다.
@@ -230,8 +237,70 @@ print(stuff)
 
 # ['With', 'three', 'words'] 로 출력됩니다.
 ```
-##### 구분자
-- split() 의 기본 구분자는 빈칸.
-- split(';') ';'을 구분자로 지정. 구분자는 문자열 가능
+---
+## 딕셔너리(dictionary) - 연관 배열 (Associative Arrays)
+- 순서가 없음
+- 키(key)가 존재
+
+생성
+`store = dict()` 또는 `store = {}`
+
+키(key)에 값(value) 연결
+```python
+store['money'] = 3     #'money'라는 키에 3이라는 값 연결
+store['candy'] = 8
+
+print(store)           #{'money': 3, 'candy': 8} 라고 출력. 항상 순서대로X
+
+print(store['candy'])  #8 출력. candy라는 키에 저장된 값에 접근
+
+store['candy'] = store['candy'] + 2
+# 'candy'에 저장된 값이 8+2=10 로 갱신됨. 그냥 store['candy']=5 이렇게 해도 되고 
+# store['candy']가 value 그 자체라서 '='도 대입연산자 그대로 사용!!
+```
+#### get 메소드 (유용한듯)
+`<딕셔너리>[key] = <딕셔너리>.get(<key>, <값>)`
+- 딕셔너리에 key가 존재할 경우 key에 대한 값을 불러온다.
+- 존재하지 않으면 key에 값이 들어간 데이터를 딕셔너리에 추가한다.
+
+(예)
+```python
+counts = dict()	 # 생성 
+names = ['aa', 'bb', 'cc', 'aa']
+for name in names :
+counts[name] = counts.get(name, 0) + 1
+```
+#### 루프 적용
+```python
+counts = { 'chuck' : 1 , 'fred' : 42, 'jan': 100}
+for key in counts:	         # "key값"을 돌게 됨
+    print(key, counts[key])
+```
+#### key나 value를 별도로 저장하려면
+1. **키로만 구성된 리스트 만들기** 
+list(<딕셔너리명>) 또는 <딕셔너리명>keys()
+2. **값으로만 구성된 리스트 만들기** 
+<딕셔너리명>values()
+3. **튜플(tuple)에 쌍을 이루어 만든 리스트** 
+<딕셔너리명>.items() 
+ex) [('jan', 100), ('chuck', 1), ('fred', 42)]
+
+예시
+```python
+jjj = { 'chuck' : 1 , 'fred' : 42, 'jan': 100}
+
+# 1. 키로만 구성된 리스트
+print(list(jjj))             # ['jan', 'chuck', 'fred']
+print(jjj.keys())            # ['jan', 'chuck', 'fred']
+
+# 2. 값으로만 구성된 리스트
+print(jjj.values())          # [100, 1, 42]
+
+# 3. 튜플에 쌍을 이루어 리스트로 저장
+print(jjj.items())           # [('jan', 100), ('chuck', 1), ('fred', 42)]
+jjj = { 'chuck' : 1 , 'fred' : 42, 'jan': 100}
+for aaa,bbb in jjj.items() : # key, value
+    print(aaa, bbb)          # chuck 1 / fred 42 / jan 100
+```
 
 ~ 추가추가 ~ 
