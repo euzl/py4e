@@ -339,6 +339,11 @@ for k, v in c.items() :
 tmp = sorted(tmp)
 print(tmp)
 ```
+내림차순으로 정렬하고 싶다면?
+```python
+tmp = sorted(tmp, reverse=True) 
+#reverse 옵션을 True로 설정
+```
 #### 리스트 컴프리헨션 (List Comprehension)
 - 딕셔너리를 값을 기준으로 정렬해서 출력하는 코드와 동일한 역할
 - 아래와 같은 방식으로 리스트를 만드는 방식을 리스트 컴프리헨션이라고 한다.
@@ -349,9 +354,5 @@ print( sorted( [ (v,k) for k,v in c.items() ] ) )
 # [(1, 'b'), (10, 'a'), (22, 'c')]
 ```
 
-내림차순으로 정렬하고 싶다면?
-```python
-tmp = sorted(tmp, reverse=True) 
-#reverse 옵션을 True로 설정
-```
+
 ~ 추가추가 ~ 
