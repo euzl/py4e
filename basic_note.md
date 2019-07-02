@@ -86,6 +86,13 @@ print(myString[0:4])   # Myn 출력. [0] ~ [3]
 print(myString[5:])    # [5] ~ 출력
 print(myString[:3])    # ~ [2] 출력
 print(myString[:])     # 전체출력
+
+# 음수도 사용가능! => 뒤에서부터 몇번째 글자! 
+print(myString[-2:])   # 뒤에서 두번째 단어부터 출력 (in)
+print(myString[:-1])   # 맨 뒤 문자 빼고 출력 (Myname is Yuji)
+
+# 음수는 평소에도 이용가능
+print(myString[-1])    # 'n' 출력! 마지막 문자.
 ```
                
 ### 들여쓰기
