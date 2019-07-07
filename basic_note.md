@@ -68,7 +68,8 @@ print(j)     # '1' 출력
 - `len(<변수명>)`	-> 글자 수 반환
 - 문자열 합치기 : `+` 기호 이용
 - `<확인하고자하는 문자(열)> in <변수명>` # 있으면 true 없으면 false
-- `<변수명>.find(<찾을 문자열>)` # <찾을 문자열>의 시작위치 반환
+- `<변수명>.find(<찾을 문자열>)` # <찾을 문자열>의 시작위치 반환. 존재하지 않으면 -1반환.
+	ex) `if line.find('From:') >= 0:` #line내에 어디에 존재한다면 실행된다는 뜻
 - strip 메소드 : 공백 제거 (필요시 검색)
 - startswith : 시작 문자열 찾기. 필요할까? ex)line.startswith('Hi') # true
 - split() 메소드 : <문자열>.split() => 띄어쓰기를 기준으로 문장을 단어들의 리스트로 만들어줌
@@ -380,6 +381,15 @@ print( sorted( [ (v,k) for k,v in c.items() ] ) )
 |[aeiou]| 명세된 집합 문자에 존재하는 단일 문자와 매칭. “a”, “e”, “i”, “o”, “u” 문자만 매칭되는 예제|
 |[a-z0-9]| `-` 기호로 문자 범위를 명세할 수 있다. 소문자이거나 숫자인 단일 문자만 매칭되는 예제.|
 |( )| 괄호가 정규표현식에 추가될 때, 매칭을 무시한다. 하지만 findall()을 사용 할 때 전체 문자열보다 매칭된 문자열의 상세한 부속 문자열을 추출할 수 있게 한다.|
+
+예시
+```python
+import re                 # regular expression
+
+re.search()               # find()메소드와 같은 역할
+re.search('From:',line)   # line에서 From: 이라는 문자패턴이 포함된 문장 찾기
+re.search('^From:',line)  # From: 으로 시작하는 문장.  line.startswith('From:') 과 같은 효과
+```
 
 ---
 ## 기타
